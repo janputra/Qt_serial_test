@@ -7,14 +7,14 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    /*
+
     Serialhandler handler;
 
-    handler.serialInit("/dev/ttyUSB0");
+    handler.serialInit("/dev/ttyHS3");
     QString tset= "HELLO WORLD";
 
     handler.send_to_INS((char *)tset.toStdString().c_str(),(uint8_t)tset.length());
-    */
+
 
     /*
     QSerialPort port;
@@ -30,8 +30,7 @@ int main(int argc, char *argv[])
 
     worker.startReceiver();
 */
-
-    char dlx =0x10;
+ /*  char dlx =0x10;
     char stx = 0x02;
     char etx = 0x03;
 
@@ -68,7 +67,7 @@ int main(int argc, char *argv[])
         }
     }
 
-
+*/
 
     return a.exec();
 }

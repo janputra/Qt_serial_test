@@ -11,7 +11,7 @@ SerialSender_worker::~SerialSender_worker(){
 
 void SerialSender_worker::startSender(char *input, uint8_t len){
     qInfo()<<" Sender worker started ";
-    buffer = new char(len);
+    buffer = new char[len];
     memcpy(buffer,input,len);
     start();
 }
@@ -31,7 +31,7 @@ void SerialSender_worker::run(){
         }
         QThread::sleep(1);
     }
-    free(buffer);
+    delete[] buffer;
     buffer = nullptr;
 
 }

@@ -40,7 +40,8 @@ void SerialReceiver_worker::run(){
     receiver_thread();
 }
 
-void SerialReceiver_worker::protocol_checker(QByteArray data){
+void SerialReceiver_worker::protocol_checker(QByteArray data)
+{
 
     for (auto ch :data){
 
